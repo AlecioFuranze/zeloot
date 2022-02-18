@@ -1,0 +1,100 @@
+#blog {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: left;
+}
+
+#blog > #blog-content {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-end;
+    position: relative;
+    flex-direction: column;
+    min-height: 200px;
+    width: 200px;
+    cursor: pointer;
+    background-color: transparent;
+    margin: 20px;
+    padding: 10;
+    transition: all 0.5s ease-in;
+    box-shadow:  #323264 0 0 10px 5px;
+}
+
+#blog > #blog-content * {
+    color: #c8c8fa;
+}
+
+#blog > #blog-content  h1 {
+    display: block;
+    margin: 2px 0;
+    font-size: 16px;
+    text-align: center;
+    width: 90%;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+#blog > #blog-content  p {
+    display: block;
+    font-size: 12px;
+    font-weight: normal;
+    text-align: center;
+    padding: 5px;
+    width: 90%;
+    text-transform: capitalize;
+}
+
+#blog > #blog-content  a {
+    cursor: pointer;
+    display: block;
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 2px;
+    margin: 5px 0;
+    text-align: center;
+}
+
+#blog>#blog-content>#blog-img {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: 0.3s ease-in;
+}
+
+#blog>#blog-content>#blog-img>img {
+    -webkit-user-drag: none;
+    transform: scale(0.5);
+    transition: all 0.5s ease-in-out;
+    filter: blur(3px);
+    filter: grayscale(1);
+    filter: saturate(2.2);
+}
+
+#blog>#blog-content>#blog-img>img:hover {
+    transform: scale(.6);
+    filter: blur(0px);
+    filter: grayscale(1);
+    filter: saturate(1.2);
+}
+
+#blog>#blog-content>#blog-data {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    min-height: 30%;
+    z-index: 1;
+    background-color: #323264;
+}

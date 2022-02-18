@@ -1,0 +1,19 @@
+extends include/layout
+
+block head-css
+    link(rel="stylesheet", href="css/blog.css")
+
+block title 
+    title Blog 
+
+block main 
+    div#blog
+        each value, index in blogs
+            div#blog-content
+                div#blog-img
+                    img(src=`${value.imageURL}`, alt="background image")
+                div#blog-data
+                    p= value.title
+                    a(href=`/blog/${value.localURL}/`)  Post
+                
+    

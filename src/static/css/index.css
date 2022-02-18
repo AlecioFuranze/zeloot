@@ -1,0 +1,12 @@
+body {
+    background-color: #727274;
+}
+
+#ops {
+    color: red;
+}
+
+.vip{
+    text-transform: capitalize;
+    text-decoration: underline;
+}

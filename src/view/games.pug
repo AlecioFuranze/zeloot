@@ -1,0 +1,15 @@
+extends include/layout
+
+block head-css
+    link(rel="stylesheet", href="css/games.css")
+
+block title 
+    title Games 
+
+block main 
+    div#game
+        each value, i in games
+            div.games
+                img(src=`${value.imageURL}`, alt="background image")
+                div.games-data
+                    a(href=`/games/${value.localURL}/`)= value.name

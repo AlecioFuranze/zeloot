@@ -1,0 +1,100 @@
+#footer {
+  width: 100%;
+  flex-wrap: wrap;
+  flex-direction: column;
+  min-height: 200px;
+  background-color: #323264;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#footer > main {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-start;
+  align-content: center;
+  justify-content: space-around;
+  width: 100%;
+  min-height: 300px;
+  max-width: 1280px;
+}
+
+#footer > p {
+  color: #c8c8fa;
+  font-weight: normal;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  margin: 20px;
+}
+
+#footer > main > .footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: transparent;
+  min-width: 200px;
+  min-height: 200px;
+  margin: 10px 0;
+}
+
+#footer > main > .footer-content * {
+  text-transform: capitalize;
+  color: #c8c8fa;
+}
+
+#footer > main > .footer-content h1 {
+  font-size: 22px;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: left;
+  padding: 10px;
+}
+#footer > main > .footer-content a {
+  font-size: 16px;
+  text-align: left;
+  padding: 10px;
+  text-decoration: none;
+  transform: translateX(15px);
+}
+
+#footer > main > .footer-content a:hover{
+  text-decoration: underline;
+}
+
+.footer-bottom-bar {
+  position: relative;
+  display: block;
+  margin-left: 10px;
+  height: 2px;
+  width: 50px;
+  background-color: #c8c8fa;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 900px) {
+  #footer > main > .footer-content {
+    width: 90%;
+    min-height: 50px;
+  }
+  #footer > main {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+    #footer > p {
+    font-size: 14px;
+    margin: 10px;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+    #footer > main > .footer-content {
+    width: 70%;
+    min-height: 50px;
+  }
+}

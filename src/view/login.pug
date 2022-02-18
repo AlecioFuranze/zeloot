@@ -1,0 +1,24 @@
+extends include/layout
+
+block head-css
+    link(rel="stylesheet", href="css/login.css")
+
+block title 
+    title Login
+
+block main 
+    div#login
+        h1 Login
+        p Log in with platforms below
+        div.login-button
+            img(src="img/zeloot_white.png", alt="zeloot icon")
+            p zeloot
+            
+        div.login-button
+            img(src="img/google_white.png", alt="google icon")
+            p google
+
+        div.login-button
+            img(src="img/facebook_white.png", alt="facebook icon")
+            p facebook
+    

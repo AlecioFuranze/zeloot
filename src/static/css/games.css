@@ -1,0 +1,99 @@
+#game {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#game > .games {
+    margin: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: calc(1920px / 6);
+    height: calc(1080px / 6);
+    overflow: hidden;
+    transition: 0.3s ease-in;
+}
+
+#game>.games>img {
+    width: calc(1920px / 6);
+    height: calc(1080px / 6);
+    transition: all 0.5s ease-in-out;
+    cursor: zoom-in;
+    filter: blur(1.25px);
+    filter: grayscale(1);
+    filter: saturate(1.25);
+}
+
+#game>.games>img:hover {
+    transform: scale(1.25);
+    filter: blur(3px);
+    filter: grayscale(1);
+    filter: saturate(2.2);
+}
+
+#game>.games>.games-data {
+    bottom: 0;
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: calc(1920px / 6);
+    z-index: 1;
+    background-color: #323264;
+}
+
+#game>.games>.games-data a {
+    cursor: pointer;
+    display: block;
+    text-transform: capitalize;
+    text-decoration: underline;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 2px;
+    margin: 5px 0;
+    color: #c8c8fa;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+#game>.games>.games-data a:hover {
+    text-decoration:overline;
+}
+
+@media only screen and (max-width: 1200px) {
+    #game > .games {        
+        width: calc(1920px / 9);
+        height: calc(1080px / 9);
+    }
+
+    #game>.games>img {       
+        width: calc(1920px / 9);
+        height: calc(1080px / 9);
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #game {
+        flex-direction: column;
+    }
+
+    #game > .games {        
+        width: calc(1920px / 7);
+        height: calc(1080px / 7);
+    }
+
+    #game>.games>img {       
+        width: calc(1920px / 7);
+        height: calc(1080px / 7);
+    }
+}
