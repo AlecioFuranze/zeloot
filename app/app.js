@@ -1,7 +1,7 @@
 const express = require("express")
 const router = require("./router")
 const config = require("./config")
-const port = 80
+const port = process.env.PORT || 80
 const app = express()
 
 app.set("views", "src/view")
